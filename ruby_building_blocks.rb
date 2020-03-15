@@ -1,4 +1,12 @@
-class LearningRuby
+=begin
+Source: The Odin Project
+Project: Building Blocks
+URL: https://www.theodinproject.com/courses/ruby-programming/lessons/building-blocks
+=end
+
+class BuildingBlocks
+    # Takes a string to encode and performs a caesar cipher, "shifting" each character by the provided
+    # amount. Leaves non-alpha characters as-is.
     def self.caesar_cipher(to_encode, shift)
         encoded_string = ''
         min_upper = 65
@@ -22,6 +30,9 @@ class LearningRuby
         puts encoded_string
     end
 
+    # Takes an array of stock prices and returns a pair of numbers with the first number
+    # representing the best day to buy and the second the best day to sell.
+    # Days start at 0 and you must buy before selling.
     def self.stock_picker(stock_prices)
         highest_diff = 0
         best_option = [-1, -1]
@@ -39,6 +50,8 @@ class LearningRuby
         puts best_option
     end
 
+    # Returns the number of times a substring from the dictionary appears in the search string.
+    # The search is case insensitive.
     def self.substrings(search_string, dictionary)
         includes_dict = Hash.new
         dictionary.each do |substring|
